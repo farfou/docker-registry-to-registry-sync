@@ -32,7 +32,7 @@ def strip_scheme(url):
 
 
 def load_config():
-    with open('config.yml') as f:
+    with open('config/config.yml') as f:
         return yaml.load(f)
 
 
