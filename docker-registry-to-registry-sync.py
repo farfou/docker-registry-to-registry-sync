@@ -74,10 +74,10 @@ if __name__ == '__main__':
     dst_password = determine_password(config, 'dst')
 
     src_client = DockerRegistryClient(src_registry_url, username=src_username,
-                                      password=src_password)
+                                      password=src_password, verify_ssl=false)
 
     dst_client = DockerRegistryClient(dst_registry_url, username=dst_username,
-                                      password=dst_password)
+                                      password=dst_password, verify_ssl=false)
 
     docker_client = docker.from_env()
     docker_client.login(registry=src_registry_url, username=src_username,
